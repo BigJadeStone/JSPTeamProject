@@ -1,0 +1,10 @@
+create table classBoard(
+    CBno number(5) constraint CBno primary key,
+    ID varchar2(20) constraint id references users (id) ,
+    writer varchar(20) not null,
+    title varchar(50) not null,
+    content varchar(500),
+    regdate date default sysdate
+);
+
+create sequence classBoard_seq nocache;
